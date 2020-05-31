@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Todo sobre Go!</title>
+    <meta name="description"
+        content="Proyecto de Teoria de Lenguajes de la ¨Programación. Pagina con informacion acerca del lenguaje de programación Go" />
+    <meta name="author" content="Jorge Guerrero Orozco y Javier Chi Ortiz" />
+    <meta name="KeyWords"
+        content="Lenguaje Go, Funciones Go, Subprogramas, Historia de Go, Informacion de Go, Go, Lenguaje de programación Go, Estructuras de control Go, ciclos Go, if, Go" />
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body>
+    <div class="agrupar">
+        <header class="cabecera">
+            <h1 style="background-color: blue;">Subprogramas en Go (Funciones)</h1>
+        </header>
+        <nav class="menuInicial">
+            <ul style="background-color: blue;">
+                <li class="submenu"><a href="index.html" style="color: whitesmoke;">Historia de Go</a> </li>
+                <li class="submenu"><a href="tiposVariablesDatos.html" style="color: whitesmoke;">Variables y Tipos de Datos</a></li>
+                <li class="submenu"><a href="" style="color: whitesmoke;">Expresiones</a></li>
+                <li class="submenu"><a href="EstructurasDeControl.html" style="color: whitesmoke;">Estructuras de Control de flujo</a></li>
+                <li class="submenu"><a href="" style="color: whitesmoke;">Ejemplo de un programa hecho con Go</a></li>
+            </ul>
+        </nav>
+
+        <section class="subprogramas">
+            <article style="background-color: blue;">
+                <hgroup>
+                    <h1 style="background-color: blue;">Funciones en Go</h1>
+                </hgroup>
+                <br>
+                <p>Una función o subrutina es una sección de código que realiza una tarea en específico. Todos los programas cuentan con, al menos, una función main (principal) con la posibilidad de definir más funciones para realizar subtareas. Todas las funciones se diferencian entre ellas, y de las variables, por medio de un identificador único.</p>
+                <br>
+                <p>La sintaxis de la declaración de funciones en Go es la siguiente</p><br>
+                <img class="imagenes" src="Images/Subprogramas1.PNG"><br>
+                <p>En base a lo anterior: </p><br>
+                <ul class="text">
+                    <li>"func" es la palabra reservada que inicia la declaración de una función.</li>
+                    <li>"Firma" es la lista de parametros</li>
+                    <li>"Nombre_funcion" es el identificador de nuestra función</li>
+                    <li>"Parámetros" son los valores que se pasan a una función para trabajar dentro de ella. Puede haber cualquier cantidad de parámetros, o ninguno.</li>
+                    <li>"Tipo" es la lista de resultados que devuelve una función por medio de un return. Puede haber cualquier cantidad de resultados, o ninguno. El número de ellos debe coincidir con los devueltos por la sentencia return en cantidad y tipo.</li>
+                    <li>"Cuerpo_función" contiene las instrucciones de la función. Si se especificó un resultado, en esta sección debe de colocarse un return con los correspondientes datos a regresar.</li>
+                </ul>
+                <br><br>
+                <h2 style="text-align: center;">Ejemplo de una funcion</h2><br>
+                <p>La siguiente función ha sido llamada "mult" y recibe 2 parametros de tipo entero (numero1 y numero2) y su tarea es multiplicar estos dos numeros y devolver el resultado</p>
+                <br>
+                <img class="imagenes" src="Images/FuncionEj.PNG"><br><br>
+                <h2>Llamado de una función</h2><br>
+                <p>Para hacer un llamado a función, se utiliza el identificador de la función (nombre) y se pasan los parámetros necesarios. Si la función regresa algún valor, este puede ser almacenado en variables.</p>
+                <br>
+                <h3>Ejemplo</h3><br>
+                <img class="imagenes" src="Images/FuncionEj2.PNG"><br><br>
+                <h2 style="text-align: center;">Ambito de una variable en Go</h2><br>
+                <p>En el ejemplo anterior se utilizó un concepto nuevo: variables locales. Una variable local es aquella a la que solamente se puede acceder desde ciertas partes de nuestros programas. Regularmente a esta característica de los lenguajes de programación se le conoce como ámbito.</p>
+                <p>El ámbito se refiere a una región del programa en la que una variable existe. En la imagen a continuación se puede ver como se utilizarn colores distintos para diferenciar ambitos distintos</p><br>
+                <img class="imagenes" src="Images/AmbitoGo.png"><br><br>
+                <ul class="text">
+                    <li>Las variables del ámbito marcado con verde encima de el pueden ser vistos y consultados por los ámbitos marcados con amarillo y rojo</li>
+                    <li>Por otro lado, las variables de los ámbitos marcados con amarillo y rojo no pueden ser consultados por el verde</li>
+                    <li>Las variables del ámbito rojo se pueden acceder desde el ámbito amarillo.</li>
+                    <li>Las variables del ámbito amarillo no pueden accederse a ellas desde el ámbito rojo</li>
+                    <li>Las variables del ámbito marcado en cian/verde aqua no pueden consultarse desde ningun otro ambito y viceversa</li>
+                    <li>Las partes marcadas con los números 1 y 2 marcan dos sentencias que son erróneas ya que intentan acceder a variables de un ámbito al que no pueden hacerlo</li>
+                </ul><br>
+                <h3>Las variables pueden ser declaradas en 3 lugares diferentes</h3><br>
+                <ul class="text">
+                    <li>Dentro de una función o bloque de código. En este caso las variables creadas son conocidas como variables locales, y por ende solamente se puede acceder a ellas dentro del ámbito al que pertenecen y tambien desde otros internos a él.</li>
+                    <li>Fuera de todas las funciones existentes. En este caso se les conoce como variables globales y por ende se puede acceder a ellas desde cualquier parte del programa.</li>
+                    <li>Por ultimo, en la definición de una función. Se les conoce como parámetros formales y solamente se puede acceder a ellas desde la función en la que se declaran.</li>
+                </ul><br><br><br>
+                <footer>Autores: Jorge Guerrero y Javier Chi</footer>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>
