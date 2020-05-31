@@ -73,6 +73,16 @@ h3{
     line-height: 25px;  
 }
 
+.expresiones {
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    width: 1210px;
+    color: whitesmoke;
+    float: left;
+    background: blue;
+    line-height: 25px;  
+}
+
 .menuInicial{
     border: 1px solid whitesmoke;
     padding: 20px;
@@ -129,7 +139,7 @@ img {
     margin-top: 25px;
     margin-bottom: 25px;;
 }
-.imagenesChicas{
+.imagenesPequeñas{
     width: 350px;
     display: block;
     float: none;
