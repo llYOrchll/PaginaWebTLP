@@ -68,17 +68,42 @@
                 <br>
                 <p>En esta expresión tan larga, primero se calcularían las expresiones con el operador de mayor peso, y después, con los resultados, se calcularían las expresiones de menor peso, siempre de izquierda a derecha.</p>
                 <p>Como ya sabemos, los operadores de mayor peso son la multiplicación, la división y el resto. Los operadores de menor peso serían la suma y la resta.</p>
-                <p>Por tanto, en el ejemplo anterior se calcularían primero, de izquierda a derecha, las operaciones de mayor peso. Una vez calculadas, de izquierda a derecha, se calcularían las operaciones de menor peso.</p>
+                <p>Por tanto, en el ejemplo anterior se calcularían primero, de izquierda a derecha, las operaciones de mayor peso. Una vez calculadas, de izquierda a derecha, se calcularían las operaciones de menor peso.</p><br>
                 <ul class="text">
                     <li style="list-style: none; background-color: #0080FF;">4 + [2 * 6] - [8 / 2] + [4 % 2]</li>
                     <li style="list-style: none; background-color: #0080FF;">4 + 12 - 4 + 0</li>
                     <li style="list-style: none; background-color: #0080FF;">12</li>
-                </ul><br><br>
+                </ul><br>
+                <p style="font-weight: bold;">Se han marcado entre corchetes las operaciones con mayor peso para una mejor identificación de como se realizan los calculos</p><br>
                 <h2>La precedencia de los parentesis</h2><br>
                 <p>Los paréntesis permiten cambiar la precedencia de los operadores, obteniendo el mayor peso en la precedencia. Por tanto, primero se calculan los paréntesis, después la multiplicación, división o resto, y, por último, la suma o la resta.</p>
+                <br>
                 <ul class="text">
                     <li style="list-style: none; background-color: #0080FF;"> fmt.Println("(4 + 2) * (6 - 8) / 2 + 4 = ", (4+2)*(6-8)/2+4)</li>
-                </ul>
+                </ul><br>
+                <p>El resultado de la expresión anterior será -2. El orden de las operaciones es el siguiente:</p>
+                <br>
+                <ul class="text">
+                    <li style="list-style: none; background-color: #0080FF;">(4 + 2) * (6 - 8) / 2 + 4</li>
+                    <li style="list-style: none; background-color: #0080FF;">(6) * (-2) / 2 + 4</li>
+                    <li style="list-style: none; background-color: #0080FF;">-12 / 2 + 4</li>
+                    <li style="list-style: none; background-color: #0080FF;">-6 + 4</li>
+                    <li style="list-style: none; background-color: #0080FF;">-2</li>
+                </ul><br>
+                <p>El paréntesis no tiene por qué englobar sólo una operación. Puede tener las operaciones que sean necesarias, e incluso englobar entre paréntesis operaciones dentro de otra operación englobada por paréntesis. Aquí el orden de precedencia serían desde los paréntesis más profundos hasta los más externos. Como por ejemplo</p><br>
+                <ul class="text">
+                    <li style="list-style: none;">fmt.Println("(4 + 2) * ((6 - 8 / 2) + 4) = ", (4+2)*((6-8/2)+4))</li>
+                </ul><br>
+                <p>El orden de las operaciones termina quedando asi:</p><br>
+                <ul class="text">
+                    <li style="list-style: none;">(4 + 2) * ((6 - 8 / 2) + 4)</li>
+                    <li style="list-style: none;">(4 + 2) * ((6 - [8 / 2]) + 4)</li>
+                    <li style="list-style: none;">(4 + 2) * ((6 - 4) + 4)</li>
+                    <li style="list-style: none;">(4 + 2) * (2 + 4)</li>
+                    <li style="list-style: none;">(6) * (6)</li>
+                    <li style="list-style: none;">36</li>
+                </ul><br><br>
+                <footer>Autores: Jorge Guerrero y Javier Chi</footer>
             </article>
         </section>
     </div>
